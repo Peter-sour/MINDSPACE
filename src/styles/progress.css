@@ -1,0 +1,64 @@
+ /* Progress Indicator */
+        .progress-container {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-top: 3rem;
+        }
+
+        .progress-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            text-align: center;
+        }
+
+        .progress-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.5rem;
+        }
+
+        .progress-day {
+            height: 40px;
+            background-color: var(--border);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .progress-day.completed {
+            background-color: var(--success);
+        }
+
+        .progress-day:hover {
+            transform: scale(1.1);
+        }
+
+        .progress-legend {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            margin-right: 0.5rem;
+        }
+
+        .legend-color.completed {
+            background-color: var(--success);
+        }
+
+        .legend-color.pending {
+            background-color: var(--border);
+        }

@@ -1,0 +1,150 @@
+/* Base Styles */
+.team {
+    padding: 60px 20px;
+    background:var(--background);
+    font-family: Arial, sans-serif;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* .section-title h2 {
+    font-size: 2em;
+    color: var(--primary);
+} */
+
+/* Grid Layout */
+.row-team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.col-lg-3 {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    box-sizing: border-box;
+}
+
+/* Team Card */
+.team-card {
+    background-color: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+     box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* shadow lebih besar saat hover */
+}
+
+.team-img {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.team-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.team-img:hover img{
+    transform: scale(1.05);
+}
+/* Overlay gelap */
+.team-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.4) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.team-img:hover::after {
+    opacity: 1;
+}
+
+/* Social Hover Effect */
+.team-social {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: bottom 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+
+.team-img:hover .team-social {
+    bottom: 10px;
+    opacity: 1;
+}
+
+.team-social a {
+    color: white;
+    background-color: var(--primary);
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    z-index: 5;
+}
+.team-social a:hover {
+     background: linear-gradient(60deg, var(--primary), var(--secondary));
+     transform: translateY(-5px);
+     transition: all 0.1s ease-in-out;
+
+}
+
+/* Info */
+.team-info {
+    padding: 20px;
+}
+
+.team-info h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: var(--primary);
+}
+
+.team-info p {
+    margin: 0;
+    color:var(--dark) ;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+    .col-lg-3 {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .col-lg-3 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

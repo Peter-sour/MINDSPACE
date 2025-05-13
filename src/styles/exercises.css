@@ -1,0 +1,77 @@
+/* Exercises Section */
+        .exercise-card {
+            background-color: var(--card);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .exercise-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .exercise-header {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .exercise-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .exercise-body {
+            padding: 1.5rem;
+        }
+
+        .exercise-steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+
+        .exercise-step {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 1.5rem;
+            counter-increment: step-counter;
+        }
+
+        .exercise-step::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 35px;
+            height: 35px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .exercise-btn {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: white;
+            padding: 0.8rem 2rem;
+            border: 0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .exercise-btn:hover {
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+        }

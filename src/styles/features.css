@@ -1,0 +1,177 @@
+ /* Card Flip Effect */
+    .feature-card-container {
+      height: 280px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .feature-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .feature-card-container:hover .feature-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .feature-card-front, .feature-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .feature-card-front {
+      background-color: var(--card);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .feature-card-back {
+      background-color: var(--primary-dark);
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .feature-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .feature-description {
+      color: var(--text-light);
+    }
+
+    .back-details {
+      font-size: 1rem;
+      color: var(--dark);
+    }
+
+    .click-info {
+      position: absolute;
+      bottom: 1rem;
+      font-size: 0.9rem;
+      color: var(--dark);
+      font-style: italic;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+      background-color: var(--card);
+      margin: 10% auto;
+      padding: 2rem;
+      width: 80%;
+      max-width: 700px;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .close-modal {
+      color: var(--text-light);
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .close-modal:hover {
+      color: var(--accent);
+    }
+
+    .modal-icon {
+      font-size: 3rem;
+      color: var(--accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .modal-title {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .modal-description {
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-benefits {
+      list-style-type: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-benefits li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .feature-benefits li:before {
+      content: "✓";
+      color: var(--success);
+      position: absolute;
+      left: 0;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--accent);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      background-color: var(--primary-dark);
+    }
+
+    .modal-buttons {
+      text-align: center;
+    }
+
+    .features {
+      padding: 4rem 0;
+    }
