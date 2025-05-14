@@ -4,7 +4,7 @@ import '../styles/mood.css';
 
 function About() {
   return(
-     <section id="about" class="section content user">
+     <section id="about" className="section content user">
         <div className="container">
             <h2 className="section-title">About MindSpace</h2>
             <p className="section-subtitle">A safe space dedicated to teen mental health awareness, education, and support</p>

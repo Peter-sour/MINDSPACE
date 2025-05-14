@@ -658,6 +658,7 @@
     }
 
     .btn-cta:hover {
+        transform: translateY(-5px);
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     }
 
@@ -858,6 +859,13 @@
 
         .feature-card {
             padding: 1.5rem;
+        }
+        .btn-cta {
+            background-color: white;
+            color: var(--primary-dark);
+            font-size: 1rem;
+            padding: 0.8rem 0.2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
     }
 /*-------------------------------------------------------------------------------------------------*/
