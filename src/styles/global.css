@@ -875,4 +875,5 @@
     width: 800px;
     float: right;
     transform: translateY(40%);
+    opacity: 0.5;
  }
