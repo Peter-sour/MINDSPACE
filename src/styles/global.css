@@ -806,7 +806,9 @@
             display: block;
             border: none;
         }
-
+        .nav-links{
+            display:flex;
+        }
         .nav-links {
             position: fixed;
             top: 70px;
@@ -824,7 +826,9 @@
         .nav-links.active {
             transform: translateY(0);
         }
-
+        .nav-links.open {
+            transform: translateY(0);
+        }
         .nav-links li {
             margin: 1rem 0;
         }

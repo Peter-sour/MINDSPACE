@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../styles/global.css'
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +16,10 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <>
       {/* header */}
@@ -28,14 +33,14 @@ const Header = () => {
               </svg>
               Mind<span>Space</span>
             </a>
-            <ul className="nav-links">
+            <ul className={`nav-links ${menuOpen ? 'open': ''}`}>
               <li><a href="#home" className="active">Home</a></li>
               <li><a href="#features">Features</a></li>
               <li><a href="#how-it-works">How It Works</a></li>
               <li><a href="#resources">Resources</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-            <button className="mobile-menu-btn">
+            <button className="mobile-menu-btn" onClick={toggleMenu}>
               <i className="fas fa-bars"></i>
             </button>
           </nav>
