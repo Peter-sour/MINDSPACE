@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/global.css'; // Gunakan file CSS asli kamu di sini
 
+import anxietyImg from '../assets/images/anxiety.jpeg';
+
 const filters = [
   { label: 'All Resources', value: 'all' },
   { label: 'Anxiety', value: 'anxiety' },
@@ -15,7 +17,7 @@ const resources = [
     id: 1,
     title: 'Breathing Techniques for Instant Calm',
     description: 'Learn 5 powerful breathing exercises that can help reduce anxiety in moments of stress.',
-    image: '/images/anxiety.jpeg',
+    image: anxietyImg,
     tag: 'Anxiety',
     category: 'anxiety mindfulness',
   },
