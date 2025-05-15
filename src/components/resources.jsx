@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import '../styles/global.css'; // Gunakan file CSS asli kamu di sini
 
 import anxietyImg from '../assets/images/anxiety.jpeg';
+import copyingImg from '../assets/images/copyng.jpeg';
+import depressionImg from '../assets/images/depression.jpeg';
+import mindfulnessImg from '../assets/images/mindfullnes.jpeg';
+import relationImg from '../assets/images/relaiton.jpeg';
+import selfImg from '../assets/images/self.jpeg';
 
 const filters = [
   { label: 'All Resources', value: 'all' },
@@ -25,7 +30,7 @@ const resources = [
     id: 2,
     title: 'Effective Mood Journaling Guide',
     description: 'Discover how structured journaling can help manage depression symptoms and improve mood.',
-    image: 'https://i.pinimg.com/736x/d4/64/59/d46459500de8d84a8470d3197ee3bded.jpg',
+    image: depressionImg,
     tag: 'Depression',
     category: 'depression self-care',
   },
@@ -33,7 +38,7 @@ const resources = [
     id: 3,
     title: '10-Minute Meditation for Teens',
     description: 'A simple, guided meditation practice designed specifically for busy teenage schedules.',
-    image: 'https://i.pinimg.com/736x/ef/d6/79/efd679c69939b92a49cc5b226c1f7f72.jpg',
+    image: mindfulnessImg,
     tag: 'Mindfulness',
     category: 'mindfulness self-care',
   },
@@ -41,7 +46,7 @@ const resources = [
     id: 4,
     title: 'Healthy Communication Skills',
     description: 'Build better relationships with friends and family through improved communication techniques.',
-    image: 'https://i.pinimg.com/736x/0e/1b/00/0e1b00e89a37fac2ffce9460ac3c00eb.jpg',
+    image: relationImg,
     tag: 'Relationships',
     category: 'relationships',
   },
@@ -49,7 +54,7 @@ const resources = [
     id: 5,
     title: 'Creating Your Self-Care Routine',
     description: 'Learn how to design a personalized self-care plan that fits your unique needs and schedule.',
-    image: 'https://i.pinimg.com/736x/11/87/ff/1187ff6952d5f659a391d7d51c0355d0.jpg',
+    image: selfImg,
     tag: 'Self-Care',
     category: 'self-care',
   },
@@ -57,7 +62,7 @@ const resources = [
     id: 6,
     title: 'Healthy Coping Mechanisms',
     description: 'Discover positive ways to handle stress, anxiety, and difficult emotions in everyday life.',
-    image: 'https://i.pinimg.com/736x/e8/05/9e/e8059eaad1004c03711f66219e1d98a1.jpg',
+    image: copyingImg,
     tag: 'Coping Skills',
     category: 'anxiety depression',
   },
