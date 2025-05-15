@@ -3,7 +3,7 @@ import '../styles/global.css';
 
 function Cta(){
   return(
-     <section className="cta">
+     <section className="cta" data-aos="zoom-in-up">
         <div className="container">
             <div className="cta-container">
                 <h2 className="cta-title">Start Your Wellness Journey Today</h2>

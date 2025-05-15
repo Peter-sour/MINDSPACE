@@ -11,7 +11,8 @@ function Hero() {
             <Dotlottie />
         </div>
         <div className="container hero-container" style={{ position: "relative", zIndex: 1 }}>
-            <div className="hero-content">
+            <div className="hero-content"data-aos="fade-up"
+     data-aos-duration="3000">
                 <h1 className="hero-title">Navigate Your Mental Wellness Journey</h1>
                 <p className="hero-subtitle">MindSpace is a safe digital haven where teens can explore, understand, and nurture their mental health with personalized resources, supportive community, and expert guidance.</p>
                 <div className="hero-buttons">

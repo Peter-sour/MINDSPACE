@@ -95,9 +95,9 @@ const ResourceSection = () => {
           ))}
         </div>
 
-        <div className="resources-grid">
+        <div className="resources-grid" >
           {filteredResources.map(resource => (
-            <div key={resource.id} className="resource-card" data-category={resource.category}>
+            <div key={resource.id} className="resource-card" data-category={resource.category} data-aos="zoom-in-down">
               <img src={resource.image} alt={resource.title} className="resource-image" />
               <div className="resource-content">
                 <span className="resource-tag">{resource.tag}</span>

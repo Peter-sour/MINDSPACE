@@ -57,7 +57,7 @@ const MoodTracker = () => {
 
   return (
     <>
-      <div className="mood-options">
+      <div className="mood-options" >
         {Object.entries(moodData).map(([mood, data]) => (
           <div
             key={mood}

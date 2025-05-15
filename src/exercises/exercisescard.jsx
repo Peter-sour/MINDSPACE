@@ -16,7 +16,7 @@ export default function ExerciseCard({ title, subtitle, steps, onComplete }) {
   };
 
   return (
-    <div className="exercise-card">
+    <div className="exercise-card" data-aos="fade-up" data-aos-duration="3000">
       <div className="exercise-header">
         <h3 className="exercise-title">{title}</h3>
         <p className="exercise-subtitle">{subtitle}</p>

@@ -4,12 +4,13 @@ import '../styles/mood.css';
 
 function About() {
   return(
-     <section id="about" className="section content user">
+     <section id="about" className="section content user" >
         <div className="container">
             <h2 className="section-title">About MindSpace</h2>
             <p className="section-subtitle">A safe space dedicated to teen mental health awareness, education, and support</p>
 
-            <div className="mood-tracker reveal-from-top">
+            <div className="mood-tracker reveal-from-top" data-aos="fade-up"
+     data-aos-duration="3000">
                 <h3 className="mood-title">How are you feeling today?</h3>
                 <MoodTracker />
             </div>

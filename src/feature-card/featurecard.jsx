@@ -5,7 +5,8 @@ import '../styles/features.css';
 const FeatureCard = ({icon, title, frontText, backText, featureKey, onClick }) => {
   return(
     <div className="feature-card-container" onClick={() => onClick(featureKey)}>
-          <div className="feature-card-inner">
+          <div className="feature-card-inner" data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
             <div className="feature-card-front">
               <div className="feature-icon">
                 <i className={`fas ${icon}`}></i>

@@ -426,8 +426,28 @@
         height: 2px;
         background: linear-gradient(to right, var(--primary), var(--secondary));
         z-index: 1;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: slide-line 2s forwards;
+       
     }
 
+    @keyframes slide-line {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+    }
+    .animate-line::before {
+        animation: growLine 1s ease-out forwards;
+   }
+    @keyframes growLine {
+    to {
+        transform: scaleX(1);
+    }
+    }
     .step {
         display: flex;
         flex-direction: column;
