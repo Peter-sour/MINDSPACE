@@ -15,7 +15,7 @@ const resources = [
     id: 1,
     title: 'Breathing Techniques for Instant Calm',
     description: 'Learn 5 powerful breathing exercises that can help reduce anxiety in moments of stress.',
-    image: 'https://i.pinimg.com/736x/47/f6/31/47f631c802d2b2fd54520fb998924ef3.jpg',
+    image: '/images/anxiety.jpeg',
     tag: 'Anxiety',
     category: 'anxiety mindfulness',
   },
