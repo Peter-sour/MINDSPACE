@@ -1,4 +1,5 @@
 import React from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import './styles/global.css';
 import './styles/features.css';
 
@@ -27,6 +28,7 @@ function App() {
     <Testimoni />
     <Cta />
     <Footer />
+    <SpeedInsights />
     </>
   );
 }
