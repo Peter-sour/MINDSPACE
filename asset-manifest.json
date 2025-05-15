@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MINDSPACE/static/css/main.0f8b4b5a.css",
-    "main.js": "/MINDSPACE/static/js/main.92305653.js",
+    "main.css": "/MINDSPACE/static/css/main.ea7202b0.css",
+    "main.js": "/MINDSPACE/static/js/main.a8fe050e.js",
     "static/js/453.8ab44547.chunk.js": "/MINDSPACE/static/js/453.8ab44547.chunk.js",
     "static/media/self.jpeg": "/MINDSPACE/static/media/self.0404385be84f857a730a.jpeg",
     "static/media/mindfullnes.jpeg": "/MINDSPACE/static/media/mindfullnes.e4218f105177a3795886.jpeg",
@@ -13,12 +13,12 @@
     "static/media/testimoni1.jpeg": "/MINDSPACE/static/media/testimoni1.8083b5ad5232b59ab5a6.jpeg",
     "static/media/testimoni2.jpeg": "/MINDSPACE/static/media/testimoni2.d42b23684a704f5af2f4.jpeg",
     "index.html": "/MINDSPACE/index.html",
-    "main.0f8b4b5a.css.map": "/MINDSPACE/static/css/main.0f8b4b5a.css.map",
-    "main.92305653.js.map": "/MINDSPACE/static/js/main.92305653.js.map",
+    "main.ea7202b0.css.map": "/MINDSPACE/static/css/main.ea7202b0.css.map",
+    "main.a8fe050e.js.map": "/MINDSPACE/static/js/main.a8fe050e.js.map",
     "453.8ab44547.chunk.js.map": "/MINDSPACE/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f8b4b5a.css",
-    "static/js/main.92305653.js"
+    "static/css/main.ea7202b0.css",
+    "static/js/main.a8fe050e.js"
   ]
 }
