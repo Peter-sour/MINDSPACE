@@ -9,8 +9,7 @@ function About() {
             <h2 className="section-title">About MindSpace</h2>
             <p className="section-subtitle">A safe space dedicated to teen mental health awareness, education, and support</p>
 
-            <div className="mood-tracker reveal-from-top" data-aos="fade-up"
-     data-aos-duration="3000">
+            <div className="mood-tracker reveal-from-top" >
                 <h3 className="mood-title">How are you feeling today?</h3>
                 <MoodTracker />
             </div>
