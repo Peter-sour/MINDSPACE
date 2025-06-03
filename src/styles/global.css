@@ -429,7 +429,7 @@
         transform: scaleX(0);
         transform-origin: left;
         animation: slide-line 2s forwards;
-       
+
     }
 
     @keyframes slide-line {
@@ -503,7 +503,7 @@
     .filter-button {
         padding: 0.6rem 1.5rem;
         border-radius: 50px;
-        background-color: var(--card);
+        background: linear-gradient(135deg, #3b82f6, #1d4ed8);;
         border: 1px solid var(--border);
         color: var(--text);
         font-size: 0.9rem;
@@ -860,6 +860,9 @@
     }
 
     @media (max-width: 576px) {
+        .globe {
+           display: none;
+        }
         .hero-title {
             font-size: 2rem;
         }

@@ -1,0 +1,559 @@
+/* Stellar Journal Modal Styles */
+.stellar-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(15, 15, 35, 0.95), rgba(25, 25, 60, 0.95));
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.stellar-modal {
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    0 0 80px rgba(138, 43, 226, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  animation: slideUp 0.4s ease-out;
+  position: relative;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Cosmic background effect */
+.stellar-modal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(138, 43, 226, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(75, 0, 130, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 50% 20%, rgba(25, 25, 112, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Header */
+.stellar-modal-header {
+  padding: 32px 32px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.stellar-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff, #e0e0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stellar-icon {
+  width: 32px;
+  height: 32px;
+  color: #8a2be2;
+  filter: drop-shadow(0 0 8px rgba(138, 43, 226, 0.5));
+  animation: twinkle 2s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  0% {
+    filter: drop-shadow(0 0 8px rgba(138, 43, 226, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 16px rgba(138, 43, 226, 0.8));
+  }
+}
+
+.stellar-modal-close{
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.stellar-modal-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.stellar-modal-close svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Content */
+.stellar-modal-content {
+  padding: 24px 32px;
+  max-height: 60vh;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.stellar-modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.stellar-modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.stellar-modal-content::-webkit-scrollbar-thumb {
+  background: rgba(138, 43, 226, 0.6);
+  border-radius: 3px;
+}
+
+.stellar-content-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+}
+
+.stellar-content-description {
+  color: #b8b8d4;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+}
+
+/* Success Message */
+.stellar-success-message {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(16, 185, 129, 0.1));
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #10b981;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  font-weight: 500;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tabs */
+.stellar-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.stellar-tab {
+  flex: 1;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  color: #b8b8d4;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.stellar-tab:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.stellar-tab-active {
+  background: linear-gradient(135deg, #8a2be2, #4b0082);
+  color: #ffffff;
+  box-shadow:
+    0 4px 12px rgba(138, 43, 226, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Write Tab */
+.stellar-write-tab {
+  space-y: 24px;
+}
+
+.stellar-prompt-section {
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.stellar-prompt-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #8a2be2;
+  margin: 0 0 12px 0;
+}
+
+.stellar-prompt-text {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.stellar-new-prompt-btn {
+  background: linear-gradient(135deg, #8a2be2, #4b0082);
+  border: none;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(138, 43, 226, 0.3);
+}
+
+.stellar-new-prompt-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(138, 43, 226, 0.4);
+}
+
+.stellar-textarea-section {
+  margin-bottom: 24px;
+}
+
+.stellar-textarea-label {
+  display: block;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.stellar-textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.6;
+  resize: vertical;
+  min-height: 200px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.stellar-textarea:focus {
+  outline: none;
+  border-color: #8a2be2;
+  box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.stellar-textarea::placeholder {
+  color: #b8b8d4;
+}
+
+/* Past Entries Tab */
+.stellar-entries-tab {
+  space-y: 16px;
+}
+
+.stellar-entries-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+}
+
+.stellar-empty-message {
+  text-align: center;
+  color: #b8b8d4;
+  font-style: italic;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.stellar-entries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stellar-entry-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.stellar-entry-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(138, 43, 226, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stellar-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.stellar-entry-date {
+  color: #8a2be2;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.stellar-entry-delete {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.stellar-entry-delete:hover {
+  background: rgba(239, 68, 68, 0.1);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.stellar-entry-delete svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+  flex-shrink: 0;
+  display: block;
+}
+
+.stellar-entry-preview {
+  color: #b8b8d4;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Footer */
+.stellar-modal-footer {
+  padding: 20px 32px 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.stellar-footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.stellar-footer-right {
+  display: flex;
+  gap: 12px;
+}
+
+.stellar-delete-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border: none;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.stellar-delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.4);
+}
+
+.stellar-delete-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+  flex-shrink: 0;
+  display: block;
+}
+
+.stellar-close-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.stellar-close-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.stellar-save-btn {
+  background: linear-gradient(135deg, #8a2be2, #4b0082);
+  border: none;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.3);
+}
+
+.stellar-save-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(138, 43, 226, 0.4);
+}
+
+.stellar-save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(138, 43, 226, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stellar-modal-overlay {
+    padding: 16px;
+  }
+
+  .stellar-modal {
+    max-height: 95vh;
+    border-radius: 16px;
+  }
+
+  .stellar-modal-header {
+    padding: 24px 20px 16px;
+  }
+
+  .stellar-modal-title {
+    font-size: 24px;
+  }
+
+  .stellar-modal-content {
+    padding: 20px;
+    max-height: 65vh;
+  }
+
+  .stellar-modal-footer {
+    padding: 16px 20px 24px;
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .stellar-footer-right {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .stellar-tabs {
+    flex-direction: row;
+  }
+
+  .stellar-prompt-section {
+    padding: 20px;
+  }
+
+  .stellar-textarea {
+    min-height: 150px;
+  }
+}

@@ -20,15 +20,16 @@ const featuresData = [
       "Track your progress with periodic reassessments",
       "100% confidential and secure"
     ],
+    type:"journal",
     ctaText: "Take Your Assessment"
   },
   {
-    id: "community",
-    icon: "fa-comment-alt",
-    title: "Safe Community",
-    frontText: "Connect with peers in a moderated, supportive environment where you can share experiences and find understanding.",
-    backText: "Join our carefully moderated community where support and understanding are always available.",
-    modalDescription: "Our community provides a supportive space where you can connect with others on similar mental health journeys. All interactions are moderated by trained professionals to ensure a positive and helpful environment.",
+    id: "Interactive Breathing",
+    icon: "fa-wind",
+    title: "Interactive Breathing",
+    frontText: "Engage with dynamic breathing exercises that adapt to your pace and guide you toward deeper relaxation.",
+    backText: "Experience personalized breathing sessions with real-time feedback and visual guidance.",
+    modalDescription: "Our interactive breathing platform provides real-time visual cues and breathing patterns that sync with your natural rhythm. Choose from various techniques, track your progress, and build a consistent practice that fits seamlessly into your daily routine.",
     benefits: [
       "24/7 moderation by qualified mental health advocates",
       "Themed discussion groups for specific challenges and conditions",
@@ -36,6 +37,7 @@ const featuresData = [
       "Peer support training for community members",
       "Regular community events and workshops"
     ],
+    type: "breathing",
     ctaText: "Join Our Community"
   },
   {
@@ -52,6 +54,7 @@ const featuresData = [
       "Evidence-based techniques and strategies",
       "Downloadable worksheets and exercise guides"
     ],
+    type: "library",
     ctaText: "Explore Resources"
   },
   {
@@ -68,6 +71,7 @@ const featuresData = [
       "Custom reminders to maintain consistent tracking",
       "Export options for sharing with healthcare providers"
     ],
+    type: "tracking",
     ctaText: "Start Tracking"
   },
   {
@@ -84,6 +88,7 @@ const featuresData = [
       "Community challenges to build connection",
       "Personalized recommendations based on your assessment"
     ],
+    type: "challenges",
     ctaText: "Begin Challenges"
   },
   {
@@ -100,6 +105,7 @@ const featuresData = [
       "Scheduling system for regular sessions",
       "Secure and confidential communications"
     ],
+    type: "expert",
     ctaText: "Connect With Experts"
   }
 ];
