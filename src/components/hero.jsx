@@ -16,7 +16,7 @@ function Hero() {
                 <h1 className="hero-title">Navigate Your Mental Wellness Journey</h1>
                 <p className="hero-subtitle">MindSpace is a safe digital haven where teens can explore, understand, and nurture their mental health with personalized resources, supportive community, and expert guidance.</p>
                 <div className="hero-buttons">
-                    <a href="#start" className="btn btn-primary">Get Started Now</a>
+                    <a href="#features" className="btn btn-primary">Get Started Now</a>
                     <a href="#how-it-works" className="btn btn-outline">Learn More</a>
                 </div>
             </div>
