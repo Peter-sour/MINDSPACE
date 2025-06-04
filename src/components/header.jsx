@@ -38,7 +38,7 @@ const Header = () => {
               <li><a href="#features">Features</a></li>
               <li><a href="#how-it-works">How It Works</a></li>
               <li><a href="#resources">Resources</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#team">Contact</a></li>
             </ul>
             <button className="mobile-menu-btn" onClick={toggleMenu}>
               <i className="fas fa-bars"></i>
